@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .result {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flip a Coin!</h1>
+    <button onclick="flipCoin()">Flip the Coin</button>
+    <div class="result" id="result">Heads or Tails?</div>
+
+    <script>
+        function flipCoin() {
+            // Generate a random number (0 or 1)
+            const randomNumber = Math.random();
+            
+            // Use a ternary operator to decide between heads (0) or tails (1)
+            const result = randomNumber < 0.5 ? 'Heads' : 'Tails';
+            
+            // Display the result in the div with the id 'result'
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+
+</body>
+</html>
